@@ -1,0 +1,83 @@
+<div class="contenedor">
+  <table class="tabla">
+    <thead>
+    <tr>
+      <th>Hecha</th>
+      <th>Tarea</th>
+      <th>Borrar</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tasksByFilter(), index as i" >
+        <td *ngIf="item.completed;else notCompleted">
+          <button class="bto-hecha" (click)="updateStade(item)">✔</button>
+        </td>
+           <ng-template #notCompleted><td>
+              <button class="bto-hecha" (click)="updateStade(item)">...</button>
+            </td></ng-template>
+        <td
+        (dblclick) = "updateStateEditingModel(item)"
+        [class.tachado] = "item.completed"
+        *ngIf="!item.editing; else blockEditing"
+        >{{item.titel }}</td>
+          <ng-template #blockEditing><td>
+            <input type="text" (keydown.enter)="updateTitel(item, $event)" [value]="item.titel">
+          </td></ng-template>
+        <td><button class="destroy" (click)="delete(item)">❌</button></td>
+      </tr>
+    </tbody>
+    </table>
+</div>
+<footer class="footer">
+
+  <span class="todo-count" >
+    <strong>{{tasksByFilter().length}}</strong>
+    <span *ngIf="tasksByFilter().length === 1; else elsePlural"> tarea</span>
+    <ng-template #elsePlural> tareas</ng-template>
+  </span>
+
+  <ul class="filters">
+    <li>
+      <a (click)="chengeFilter('all')" [class.selected]="filter() === 'all'" >All</a>
+    </li>
+    <li>
+      <a (click)="chengeFilter('pending')" [class.selected]="filter() === 'pending'">Pending</a>
+    </li>
+    <li>
+      <a (click)="chengeFilter('completed')" [class.selected]="filter() === 'completed'">Completed</a>
+    </li>
+  </ul>
+
+</footer>
+<!--
+<ul class="todo-list">
+  <li >
+    <div class="view" [ngClass]="{ 'completed': item.completed, 'pending': !item.completed }">
+      <div class="checkbox-container">
+        <input class="toggle" type="checkbox" [checked]="item.completed" (change)="updateStade(item)" />
+        <label>{{item.titel}}</label>
+      </div>
+      <button class="destroy" (click)="delete(item)">x</button>
+    </div>
+<input class="edit" value="Learn JavaScript" />
+  </li> -->
+  <!--
+    <li class="completed">
+    <div class="view" *ngFor="let item of tasks()">
+      <input class="toggle" type="checkbox" checked />
+      <label *ngIf="item.completed">{{item.titel}}</label>
+      <button class="destroy"></button>
+    </div>
+    <input class="edit" value="Learn JavaScript" />
+  </li>
+
+  <li class="editing">
+    <div class="view">
+      <input class="toggle" type="checkbox" />
+      <label>Make dishes</label>
+      <button class="destroy"></button>
+    </div>
+    <input class="edit" value="Make dishes" />
+  </li>
+
+</ul>-->

@@ -1,0 +1,66 @@
+.tabla {
+  margin: auto;
+  margin-top: 1em;
+  border: 1px solid #1C6EA4;
+  width: 80%;
+  text-align: center;
+}
+
+.tabla td, .tabla th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+.tabla td {
+  font-size: 12px;
+}
+.tabla thead {
+  background: #BD2EFF;
+  background: linear-gradient(to bottom, #cd62ff 0%, #c343ff 66%, #BD2EFF 100%);
+}
+.tabla thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.bto-hecha{
+  font-size: 16px;
+  color: green;
+}
+
+.tachado{
+  text-decoration: line-through;
+  color:  #848383;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+
+.filters{
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+}
+
+a{
+  margin: 1em;
+  padding: 0.5em;
+  border: solid #BD2EFF 2px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  background: linear-gradient(to bottom, #cd62ff 0%, #c343ff 66%, #BD2EFF 100%);
+  border-radius: 10px;
+}
+
+.selected {
+  border: solid #352d39 2px;
+  background: linear-gradient(to bottom, #c9c5cb 0%, #6b5e71 66%, #352d39 100%);
+}

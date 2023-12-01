@@ -1,0 +1,66 @@
+{
+  "tasks": [
+    {
+      "id": 3,
+      "fecha": "2023-11-25T08:45:00Z",
+      "titel": "Tarea primera",
+      "description": "Descripción de la tarea 3",
+      "completed": false,
+      "editing": false
+    },
+    {
+      "id": 6,
+      "fecha": "2023-11-28T16:00:00Z",
+      "titel": "Tarea 6",
+      "description": "Descripción de la tarea 6",
+      "completed": true
+    },
+    {
+      "id": 7,
+      "fecha": "2023-11-29T11:45:00Z",
+      "titel": "Tarea 7",
+      "description": "Descripción de la tarea 7",
+      "completed": true
+    },
+    {
+      "id": 9,
+      "fecha": "2023-12-01T07:00:00Z",
+      "titel": "Tarea 9",
+      "description": "Descripción de la tarea 9",
+      "completed": true
+    },
+    {
+      "id": 10,
+      "fecha": "2023-12-02T15:30:00Z",
+      "titel": "Tarea 10",
+      "description": "Descripción de la tarea 10",
+      "completed": false,
+      "editing": false
+    },
+    {
+      "date": "2023-11-24T14:42:30.789Z",
+      "titel": "nueva editada",
+      "completed": true,
+      "id": 13,
+      "editing": false
+    },
+    {
+      "date": "2023-11-24T16:08:21.437Z",
+      "titel": "nueva 3",
+      "completed": false,
+      "id": 14
+    },
+    {
+      "date": "2023-11-30T13:48:47.029Z",
+      "titel": "Terminar ToDo",
+      "completed": false,
+      "id": 15
+    },
+    {
+      "date": "2023-11-30T14:03:50.638Z",
+      "titel": "Nueva tarea 203",
+      "completed": false,
+      "id": 16
+    }
+  ]
+}

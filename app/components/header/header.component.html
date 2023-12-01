@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="container">
+    <h1>Mis tareas</h1>
+    <p>Todo en un mismo lugar</p>
+    <input
+      class="new-todo"
+      placeholder="Ingresar nueva tarea"
+      autofocus
+      type="text"
+      [formControl] = "newTaskCtrol"
+      (keydown.enter)="changeHandler()"
+    /> <!-- changeHandler = controladorDeCambios-->
+  </div>
+</header>

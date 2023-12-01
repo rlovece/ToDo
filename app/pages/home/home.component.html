@@ -1,0 +1,13 @@
+<section class="todoapp">
+  <app-header (EmitAddTask)="addTask($event)"></app-header>
+  <div class="container todoapp">
+    <app-tasks-list
+      [inputTasks]="tasks"
+      (emitDelete)="deleteTask($event)"
+      (emitUpdateStade)="updateStadeTask($event)"
+      (emitUpdateTitel)="updateTitelTask($event)"
+    ></app-tasks-list>
+    <p>Puede hacer doble click sobre una tarea para editarla si no está completada.</p>
+    <p>Para cambiar de estado haga un click en la columna Hecha</p>
+  </div>
+</section>
